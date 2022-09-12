@@ -25,7 +25,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Header
-          backgroundColor={'#9c8210'}
+          backgroundColor={'#9c8210'} 
           centerComponent={{
             text: 'Monkey Chunky',
             style: { color: '#fff', fontSize: 20 },
@@ -59,7 +59,7 @@ export default class App extends React.Component {
           }}>
           <Text style={styles.buttonText}>GO</Text>
         </TouchableOpacity>
-        <View>
+        <View style = {{flexDirection:"row", alignSelf:"center"}}>
           {this.state.chunks.map((item, index) => {
             return (
               <PhonicSoundButton
@@ -82,6 +82,7 @@ const styles = StyleSheet.create({
   },
   inputBox: {
     marginTop: 50,
+    borderRadius: 30,
     width: '80%',
     alignSelf: 'center',
     height: 40,
